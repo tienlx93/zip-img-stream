@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  div 
+  each file in fileList
+    p 
+      a(href=`/detail/${file.name}`) #{file.name}

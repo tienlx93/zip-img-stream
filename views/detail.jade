@@ -1,0 +1,27 @@
+extends layout
+
+block additionalHeader
+  style.
+    #lightgallery img {
+      width: 100px;
+      margin: 5px;
+    }
+
+block content
+  h1= title
+  p Welcome to #{title}
+  div #{zipFileName}
+  div#lightgallery
+    each file in fileList
+      a(href=`/api/get-zip-content?filename=${zipFileName}&zipname=${file}`)
+        img(src=`/images/Who.png`, alt="", srcset="")
+
+
+  script(type='text/javascript').
+    lightGallery(document.getElementById('lightgallery'), {
+      plugins: [lgZoom],
+      speed: 500,
+      showZoomInOutIcons: true,
+      slideEndAnimation: false,
+      easing: '',
+    });

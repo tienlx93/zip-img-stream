@@ -1,0 +1,22 @@
+{
+  "name": "zip-img-stream",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "glob": "^7.1.7",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "lightgallery": "^2.1.8",
+    "lightgallery.js": "^1.4.0",
+    "morgan": "~1.9.1",
+    "node-fetch": "^2.6.1",
+    "node-stream-zip": "^1.13.6",
+    "walk": "^2.3.14"
+  }
+}
