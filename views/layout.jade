@@ -7,6 +7,14 @@ html
     script(src="/javascripts/lightgallery.umd.js")
     script(src="/javascripts/lg-zoom.umd.js")
     script(src="/javascripts/lg-thumbnail.umd.js")
+    script(src="/javascripts/lazyload.js")
     block additionalHeader
+    style. 
+      a.home {
+        text-decoration: none;
+        color: chocolate;
+      }
   body
+    a.home(href='/')
+      h1 Image gallery
     block content

@@ -1,9 +1,32 @@
 extends layout
 
+block additionalHeader
+  style.
+    #detail {
+      display: inline-block;
+      margin: 10px;
+    }
+    #detail img {
+      width: 100px;
+      display: block;
+      text-align: center;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+    #detail span {
+      display: block;
+      width: 200px;
+      line-break: anywhere;
+      text-align: center;
+    }
+
 block content
-  h1= title
   p Welcome to #{title}
   div 
   each file in fileList
-    p 
-      a(href=`/detail/${file.name}`) #{file.name}
+    div#detail
+      a(href=`/detail/${file.name}`)
+        img(src=`/api/get-thumb?filename=${file.name}&thumbname=folder.jpg`,
+                 alt=file.name, loading='lazy')
+        span #{file.name} 

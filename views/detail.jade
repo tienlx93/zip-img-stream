@@ -8,7 +8,6 @@ block additionalHeader
     }
 
 block content
-  h1= title
   p Welcome to #{title}
   div #{zipFileName}
   if fileList.error
@@ -17,8 +16,7 @@ block content
     div#lightgallery
       each file in fileList
         a(href=`/api/get-zip-content?filename=${zipFileName}&zipname=${file}`)
-          img(src=`/images/Who.png`, alt="", srcset="")
-
+          img(src=`/api/get-thumb?filename=${zipFileName}&thumbname=${file}`, alt=file, srcset="")
 
   script(type='text/javascript').
     lightGallery(document.getElementById('lightgallery'), {

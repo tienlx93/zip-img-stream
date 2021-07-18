@@ -1,9 +1,10 @@
 var path = require('path');
 
 const ROOT_DIR = process.env.ROOT_DIR || path.join(__dirname, './public/zip');
-console.log(ROOT_DIR);
-console.log(process.env.ROOT_DIR);
+const THUMB_DIR = process.env.THUMB_DIR || path.join(__dirname, './thumb');
+
 
 module.exports = {
-  ROOT_DIR
+  ROOT_DIR,
+  THUMB_DIR,
 }
